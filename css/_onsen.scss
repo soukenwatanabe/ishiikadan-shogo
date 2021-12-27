@@ -1,0 +1,66 @@
+//温泉の画像//
+
+.hotspring-picture1{
+  z-index: 100;
+  background:url(../images/onsen01.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -60px;
+  height: 310px;
+  width: 525px;
+}
+.hotspring-picture2{
+  z-index: 100;
+  background:url(../images/onsen02.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 500px;
+  right:0;
+  height: 300px;
+  width: 525px;
+}
+.hotspring_contents{
+  padding-bottom: 130px;
+}
+
+.flex-dl{
+  display: flex;
+  border-top: 1px solid #E7E7E7;
+  padding: 13px 0;
+  margin: 0;
+  font-size: 15px;
+}
+.flex-dd{
+  margin-left: 0;
+  white-space: nowrap;
+}
+.flex-dt{
+  margin-left: 190px;
+  text-align-last: left;
+}
+.last {
+  border-bottom: 1px solid #E7E7E7;
+}
+.lastdd{
+  margin-top:10px;
+}
+.not{
+  margin-left: 160px;
+}
+.onsen-btm-inner{
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 88px 0 75px;
+  margin-bottom: 90px;
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  h2{
+    font-size: 26px;
+    font-weight: normal;
+    margin: 0 0 50px; 
+  }
+}

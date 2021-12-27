@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
+  <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。
+  伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+
+  <!--header-->
+  <div class="header"> <!--スクロールすると画像変換をjQueryのaddclassで実装-->
+    <div class="header_inner">
+    <div class="header_left">
+      <a href="index.html"><img src="images/top-header-logo.png" alt="石井花壇ロゴ"></a>
+      <a href="index.html"><img src="images/sub-header-logo.png" alt="石井花壇ロゴ" class="js-header"></a>
+      <ul class="header_list">
+        <li><a href="room.html">お部屋</a></li>
+        <li><a href="food.html">お料理</a></li>
+        <li><a href="hotspring.html">温泉</a></li>
+      </ul>
+    </div>
+    <div class="header-btn">
+      <a href="#" class="btn-reservation openModal">
+        宿泊予約<!---ここに疑似要素でカレンダーurl挿入-->
+      </a>
+       <!-- モーダルエリアここから -->
+       <section id="modalArea" class="modalArea">
+         <div id="modalBg" class="modalBg"></div>
+           <div class="modalContents">
+             <h2>宿泊予約</h2>
+             <div id="closeModal" class="closeModal">
+              <img src="images/close.png" alt="">
+              </div>
+             <form action="//www-creators.com/rsc/receiver.php" method="post">
+             <div class="form-wrapper">
+              <label class="formtxt">お名前</label><br>
+              <input type="text" name="first-name" maxlength="10" value="" placeholder="例：石井正悟"><br>
+            </div>
+            <div class="form-wrapper">
+              <label class="formtxt">メールアドレス</label><br>
+              <input type="email" name="email-address" value="" placeholder="例：Example@example.com"><br>
+            </div>
+            <div class="form-wrapper">
+              <label class="formtxt">ご希望プラン（空いているプランのみ表示されます）</label><br>
+              <select name="plan">
+                <option value="選択してください">選択してください</option>
+                <option value="【期間限定】海辺の四季旬彩、贅沢美味懐石プラン">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                <option value="平日に優雅に楽しむ、特別宿泊プラン">平日に優雅に楽しむ、特別宿泊プラン</option>
+                <option value="絶景貸切露天と個室会席を満喫できるファミリープラン">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+              </select><br>
+            </div>
+            <div class="form-wrapper">
+              <label class="formtxt">日時選択</label><br>
+              <!--datepicker-->
+              <input type="text" id="flatpickr" placeholder="日時を選択してください">
+
+            </div>
+            <div class="close-btn">
+              <a>送信する</a>
+            </div>
+             </form>                
+           </div>
+           <div id="closeModal" class="closeModal">×</div>
+        
+        </section><!---モーダルエリア終了-->
+
+
+
+
+
+           <div class="drawer-toggle"><!--ハンバーガーメニュースタート-->
+            <span></span>
+            <span></span>
+            <span></span>
+           </div>
+           <!--背景をクリックしても、閉じるように-->
+           <nav class="global-nav">
+             <ul class="drawer-menu">
+               <li class="header-nav-item"><a class="header-nav-item-link" href="room.html">お部屋</a></li>
+               <li class="header-nav-item"><a class="header-nav-item-link" href="food.html">お料理</a></li>
+               <li class="header-nav-item"><a class="header-nav-item-link" href="hotspring.html">温泉</a></li>
+             </ul>
+           </nav>
+        </div>
+      </div>
+    </div><!--header-->
+
+  <div class="top_img">
+    <p class="top_img_txt">お料理</p>
+    <div class="item" style="background-image: url(images/menu-top.jpg)">
+    </div>
+  </div>
+
+
+  <div class="main">
+    <div class="main_inner">
+      <p class="innertop">
+        <a href="index.html"><span>トップ</span></a>
+        >
+        <span>お料理</span>
+      </p>
+      <p class="innersemtop">
+        地元熱海の市場で仕入れた食材のみを使った<br class="sp_only">食材をふんだんに使い、<br>
+        大将の技が光る「熱海料理」<br>
+        四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。
+      </p>
+
+      <section class="oheya_contents_wrapper container">
+        <div class="oryouri-picture1 mainpicture"></div>
+        <div class="oheya_contents scrollup oryouri-contents1">
+          <div class="oheya-txt">
+            <h2 class="oheya_top">地元食材にこだわった会席料理</h2>
+            <p class="oheya_mdl">みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br>旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br>四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
+          </div>
+        </div>
+        <div class="oryouri-picture2 mainpicture"></div>
+        <div class="oheya_contents1 scrollup oryouri-contents">
+          <div class="oheya-txt1">
+            <h2 class="oheya_top">熱海の漁港で目利きの品を</h2>
+            <p class="oheya_mdl">石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br>
+              熱海の魚市場でその日のうちに仕入れたものを使用しております。<br>日本海の宝玉を十分にお楽しみください。</p>
+          </div>
+        </div>
+        <div class="oryouri-picture3 mainpicture oryouri"></div>
+        <div class="oheya_contents scrollup oryouri-contents2">
+          <div class="oheya-txt">
+            <h2 class="oheya_top">食材が一流、職人も一流</h2>
+            <p class="oheya_mdl">石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>
+              その時の最も旬な食材を、最高の調理でお届けします。<br>
+              また、お料理への細かいご要望にもお答えできますので、<br>
+              お気軽にお申し付けください。</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <section class ="footer">
+    <div class="footer_top fadeIn1">
+      <nav>
+        <ul>
+          <li>
+            <a href="hotspring.html">温泉</a>
+          </li>
+          <li>
+            <a href="food.html">お料理</a>
+          </li>
+          <li>
+            <a href="room.html">お部屋</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer_btm">
+      <div class="footer_img fadeIn2">
+        <a href="index.html">
+          <img src="images/footer-logo.png" alt="フッターロゴ">
+        </a>
+      </div>
+      <div class="footer_btm1 fadeIn2">
+        <p>〒000-0000</p>
+        <p>山形県鶴岡市xxxxxxxxxxx</p>
+      </div>
+
+      <div class="footer_btm2 fadeIn2">
+        <p>TEL.000-0000-0000</p>
+        <p>FAX.00-0000-0000</p>
+      </div>
+
+    </div>
+    <div class="footer_copyright">
+      <small>Copyright &copy; 石井花壇 All Rights Reserved.</small>
+    </div>
+  </section>
+  <script>
+
+    //javascript//
+
+    const config = {
+    mode: "range",
+    minDate: "today",
+  　dateFormat: "Y-m-d",
+  }
+    flatpickr('#flatpickr', config);
+
+
+    </script>
+
+</body>
+
+
+</html>

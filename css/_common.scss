@@ -1,0 +1,374 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
+li {
+  list-style: none;
+}
+.sp_only{
+  display: none;
+}
+
+////
+.change-color{
+  background-color:#fff;
+  height: 60px;
+  & a{
+    color: #000;
+}
+}
+.header-btn a{
+  color: #fff;
+}
+.js-header{
+  display: none;
+}
+.js-header-logo{
+  display: block;
+  margin-left:-200px;
+  margin-top: -6px;
+}
+
+
+//Modal//
+/* モーダルCSSここから */
+.modalArea {
+  visibility: hidden; /* displayではなくvisibility */
+  opacity : 0;
+  position: fixed;
+  z-index: 10; /* サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .4s;
+}
+
+
+
+input, select {
+  border: 1px solid #E7E7E7;
+  padding: 0 10px;
+  width: 100%;
+  background: transparent;
+  line-height: 1;
+  color: #797878;
+  height: 32px;
+  font: inherit;
+  box-sizing: border-box;
+  outline:none;
+}
+//modal中身//
+
+.modalContents{
+  width: 28.6458%;
+  min-width: 420px;
+  padding: 20px 65px 100px 65px;
+  background: #fff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 20%;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.modalContents h2 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 1px solid #F3F3F3;
+  margin: 10px 0 30px;
+  padding-bottom: 20px;
+}
+
+.formtxt{
+  display: inline-block;
+  margin-bottom: 13px;
+  margin-top: 2px;
+}
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30,30,30,0.9);
+}
+
+select {
+  cursor: pointer;
+}
+
+.closeModal {
+    cursor: pointer;
+    width: 18px;
+    position: absolute;
+    top: 23px;
+    right: 22px;
+    
+}
+
+.close-btn{
+  cursor:pointer;
+  text-decoration: none;
+  margin-top: 70px;
+  text-align: center;
+   a {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 65px;
+    &:hover{
+      color: #fff;
+    }
+   }
+}
+
+.is-show { /* モーダル表示用クラス */
+  visibility: visible;
+  opacity : 1;
+}
+select {
+  color: #999999;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* ie対応 */
+select::-ms-expand {
+  display: none;
+}
+//Mainimg//
+.top_img{
+  position: relative;
+  height: 575px;
+}
+
+.item{
+  z-index: 20;
+  opacity:0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 575px;
+  animation-name: mainImg; 
+  animation-duration: 3s; 
+  animation-fill-mode: forwards; 
+}
+@keyframes mainImg{
+0% {
+  opacity: 0;
+}
+90% {
+ opacity: 1;
+}
+ 100% {
+  opacity: 1;
+} 
+}
+.top_img_txt{
+  z-index: 30;
+  position: absolute;
+  display: block;
+  top: 52%;
+  left: 46%;
+  color:#fff;
+  font-weight: 900;
+  font-size: 34px;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+}
+.main_inner{
+  max-width: 1170px;
+  width:95%;
+  margin: 0 auto;
+}
+.innertop{
+  text-align: left;
+  margin: 30px 0 0;
+  a{
+    text-decoration: none;
+    color:#000;
+
+    &:hover{
+      font-weight: 600;
+    }
+  }
+}
+.innersemtop{
+  text-align: center;
+  margin: 80px 0 160px;
+}
+section.oheya_contents_wrapper.container {
+  position: relative;
+}
+
+
+//お料理の画像//
+.oryouri-picture1{
+  z-index: 100;
+  background:url(../images/menu01.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -60px;
+  height: 315px;
+  width: 525px;
+  
+}
+.oryouri-picture2{
+  z-index: 100;
+  background:url(../images/menu02.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 480px;
+  right:0;
+  height: 315px;
+  width: 525px;
+}
+.oryouri-contents{
+  padding-bottom: 90px !important;
+}
+.oryouri-picture3{
+  z-index: 100;
+  background:url(../images/menu03.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 1030px;
+  left: 0;
+  height: 315px;
+  width: 525px;
+}
+
+.oryouri{
+  top:980px;
+}
+
+//お部屋の画像//
+.oheya-picture1{
+  z-index: 100;
+  background:url(../images/oheya01.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -60px;
+  height: 310px;
+  width: 525px;
+}
+.oheya-picture2{
+  z-index: 100;
+  background:url(../images/oheya02.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 480px;
+  right:0;
+  height: 300px;
+  width: 525px;
+}
+.oheya-picture3{
+  z-index: 100;
+  background:url(../images/oheya03.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 1030px;
+  left: 0;
+  height: 300px;
+  width: 525px;
+}
+.oheya_contents{
+  position: relative;
+    background: url(../images/bg.jpg);
+    background-position: center;
+    padding-bottom: 65px;
+    width: 65%;
+    padding-right: 100px;
+    margin-left: auto;
+    margin-bottom: 150px;
+}
+.oheya_contents1{
+  position: relative;
+  background: url(../images/bg.jpg);
+  background-position: center;
+  padding-bottom: 45px;
+  width: 65%;
+  padding-left: 60px;
+  margin-right: auto;
+  margin-bottom: 150px;
+  &-txt1{
+    width: 62%;
+  }
+}
+
+
+
+.oheya-txt{
+  width: 62%;
+  margin-left: auto;
+}
+
+.oheya_top{
+  margin: 0;
+  padding-top: 55px;
+  font-weight: normal;
+}
+
+.oheya_mdl{
+  margin: 0;
+  padding: 55px 0;
+}
+
+.oheya_btm{
+  white-space: nowrap;
+  margin:  0;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+.mainpicture{
+  opacity: 0;
+  transition: 1.4s;
+  visibility: hidden;
+  transform: translateY(100px);
+}
+.fadeIn1{
+  opacity: 0;
+  transition: 2s;
+  visibility: hidden;
+}
+.fadeIn2{
+  opacity: 0;
+  transition: 5s;
+  visibility: hidden;
+}
+.scrollup{
+  opacity: 0;
+  transition: 2.5s;
+  visibility: hidden;
+  transform: translateY(120px);
+}
+.animated{
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+//ttlicon//
+.ttl-icon{
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}

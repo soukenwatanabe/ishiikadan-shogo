@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
+  <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。
+  伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+
+  <!--header-->
+  <div class="header"> <!--スクロールすると画像変換をjQueryのaddclassで実装-->
+    <div class="header_inner">
+    <div class="header_left">
+      <a href="index.html"><img src="images/top-header-logo.png" alt="石井花壇ロゴ"></a>
+      <a href="index.html"><img src="images/sub-header-logo.png" alt="石井花壇ロゴ" class="js-header"></a>
+      <ul class="header_list">
+        <li><a href="room.html">お部屋</a></li>
+        <li><a href="food.html">お料理</a></li>
+        <li><a href="hotspring.html">温泉</a></li>
+      </ul>
+    </div>
+    <div class="header-btn">
+      <a href="#" class="btn-reservation openModal">
+        宿泊予約<!---ここに疑似要素でカレンダーurl挿入-->
+      </a>
+       <!-- モーダルエリアここから -->
+       <section id="modalArea" class="modalArea">
+         <div id="modalBg" class="modalBg"></div>
+           <div class="modalContents">
+             <h2>宿泊予約</h2>
+             <div id="closeModal" class="closeModal">
+              <img src="images/close.png" alt="">
+              </div>
+             <form action="//www-creators.com/rsc/receiver.php" method="post">
+             <div class="form-wrapper">
+              <label class="formtxt">お名前</label><br>
+              <input type="text" name="first-name" maxlength="10" value="" placeholder="例：石井正悟"><br>
+            </div>
+            <div class="form-wrapper">
+              <label class="formtxt">メールアドレス</label><br>
+              <input type="email" name="email-address" value="" placeholder="例：Example@example.com"><br>
+            </div>
+            <div class="form-wrapper">
+              <label class="formtxt">ご希望プラン（空いているプランのみ表示されます）</label><br>
+              <select name="plan">
+                <option value="選択してください">選択してください</option>
+                <option value="【期間限定】海辺の四季旬彩、贅沢美味懐石プラン">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                <option value="平日に優雅に楽しむ、特別宿泊プラン">平日に優雅に楽しむ、特別宿泊プラン</option>
+                <option value="絶景貸切露天と個室会席を満喫できるファミリープラン">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+              </select><br>
+            </div>
+            <div class="form-wrapper">
+              <label class="formtxt">日時選択</label><br>
+              <!--datepicker-->
+              <input type="text" id="flatpickr" placeholder="日時を選択してください">
+
+            </div>
+            <div class="close-btn">
+              <a>送信する</a>
+            </div>
+             </form>                
+           </div>
+           <div id="closeModal" class="closeModal">×</div>
+        
+        </section><!---モーダルエリア終了-->
+
+
+            <div class="drawer-toggle"><!--ハンバーガーメニュースタート-->
+              <span></span>
+              <span></span>
+              <span></span>
+             </div>
+             <!--背景をクリックしても、閉じるように-->
+             <nav class="global-nav">
+               <ul class="drawer-menu">
+                 <li class="header-nav-item"><a class="header-nav-item-link" href="room.html">お部屋</a></li>
+                 <li class="header-nav-item"><a class="header-nav-item-link" href="food.html">お料理</a></li>
+                 <li class="header-nav-item"><a class="header-nav-item-link" href="hotspring.html">温泉</a></li>
+               </ul>
+             </nav>
+        </div>
+      </div>
+    </div><!--header-->
+
+  <div class="top_img">
+    <p class="top_img_txt">温泉</p>
+    <div class="item" style="background-image: url(images/onsen-top.jpg);">
+    </div>
+
+
+  <div class="main">
+    <div class="main_inner">
+      <p class="innertop">
+        <a href="index.html"><span>トップ</span></a>
+        >
+        <span>温泉</span>
+      </p>
+      <p class="innersemtop">
+        心も身体も癒やす汐の温泉。<br>
+        湯あたりしにくく、赤ちゃんから年配の方までどなたでもゆっくりと安心して入っていただけます。<br>
+        柔らかく優しい湯にじっくりと漬かれば、心身共にリラックスできます。
+      </p>
+
+      <section class="oheya_contents_wrapper container">
+        <div class="hotspring-picture1 mainpicture"></div>
+        <div class="oheya_contents scrollup hotspring_contents">
+          <div class="oheya-txt">
+            <h2 class="oheya_top">貸し切り露天風呂「雲居の湯」</h2>
+            <p class="oheya_mdl">弱酸性の湯質が優しく肌を包み込むような心地よさ<br>
+              最上階の露天風呂「雲居の湯」では、湯冷めしにくい食塩泉を<br>
+              熱海の町並みを遠方に望みながら・・・</p>
+          </div>
+        </div>
+        <div class="hotspring-picture2 mainpicture"></div>
+        <div class="oheya_contents1 scrollup oryouri-contents hotspring_contents2">
+          <div class="oheya-txt1">
+            <h2 class="oheya_top">美肌を促す乳白色の硫黄泉を</h2>
+            <p class="oheya_mdl">まじりっけなしの白いにごり湯。鳥海山から引いた酸性の強い硫酸塩<br>泉を、<br>
+              たっぷりと掛け流しています。<br>四季の移り変わりを、天然温泉の湯に浸りながら味わってください。</p>
+          </div>
+        </div>
+      </section>
+        <!--温泉の効能テキスト入ります-->
+
+        <div class="onsen-btm-wrapper">
+          <div class="onsen-btm-inner scrollup">
+            <h2>温泉の効能</h2>
+            <dl class="flex-dl">
+              <dd class="flex-dd">効能</dd>
+              <dt class="flex-dt">神経痛・慢性関節リューマチ・腰痛・冷え性・慢性婦人病・うちみなど</dt>
+            </dl>
+            <dl class="flex-dl">
+              <dd class="flex-dd">泉質</dd>
+              <dt class="flex-dt">ナトリウム・カルシウム-塩化物泉</dt>
+            </dl>
+            <dl class="flex-dl last">
+              <dd class="flex-dd lastdd">飲用効果</dd>
+              <dt class="flex-dt not">弱塩化物泉は肌にやわらかなため、高齢者や病後の回復期によく、飲用すれば慢性便秘や慢性消化 器病に効果があります。</dt>
+            </dl>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <section class ="footer">
+    <div class="footer_top fadeIn1">
+      <nav>
+        <ul>
+          <li>
+            <a href="hotspring.html">温泉</a>
+          </li>
+          <li>
+            <a href="food.html">お料理</a>
+          </li>
+          <li>
+            <a href="room.html">お部屋</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer_btm">
+      <div class="footer_img fadeIn2">
+        <a href="index.html">
+          <img src="images/footer-logo.png" alt="フッターロゴ">
+        </a>
+      </div>
+      <div class="footer_btm1 fadeIn2">
+        <p>〒000-0000</p>
+        <p>山形県鶴岡市xxxxxxxxxxx</p>
+      </div>
+
+      <div class="footer_btm2 fadeIn2">
+        <p>TEL.000-0000-0000</p>
+        <p>FAX.00-0000-0000</p>
+      </div>
+
+    </div>
+    <div class="footer_copyright">
+      <small>Copyright &copy; 石井花壇 All Rights Reserved.</small>
+    </div>
+  </section>
+
+  <script>
+
+    //javascript//
+
+    const config = {
+    mode: "range",
+    minDate: "today",
+  　dateFormat: "Y-m-d",
+  }
+    flatpickr('#flatpickr', config);
+
+
+    </script>
+
+</body>
+
+
+</html>

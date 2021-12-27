@@ -1,0 +1,173 @@
+.global-nav {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  position: fixed;
+  top: 70px;
+  right: 0;
+  z-index: 10;
+  transform: translateX(100%); /* right0から620px移動した位置 */
+  transition: all .5s; /* 移動する速さ */
+}
+
+.action {
+  transform: translateX(0)!important;
+}
+
+.header .global-nav {
+ul{
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+li {
+  padding-right: 0;
+  font-size: 24px;
+ a {
+  background:transparent;
+  display: inline-block;
+  }
+}
+}
+.header-nav-item {
+  margin-top: 50px;
+}
+.header-nav-item:nth-child(1){
+  margin-top: 120px;
+}
+.header-nav-item-link:hover{
+  font-weight: bold;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.drawer-toggle .black-color{
+  background-color: #000;
+}
+
+.global-nav .white-color{
+  background-color: #fff;
+  height: 100%;
+  margin: 0;
+  a {
+    color: #000;
+  }
+}
+
+
+.drawer-toggle {
+  z-index: 200;
+  box-sizing: border-box;
+  position: absolute;
+  top: -22px;
+  right: -110px;
+  display: none;
+  width: 60px;
+  height: 60px;
+}
+.drawer-toggle span {
+  position: absolute;
+  top: 19px;
+  left: 17px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  vertical-align: top;
+  &:nth-child(2){
+    margin-top: 10px;
+  }
+  &:last-child{
+    margin-top: 20px;
+  }
+}
+.drawer span{
+  top:29px;
+  left: 14px;
+  width: 35px;
+  margin: 0;
+  &:first-child{
+    transform:rotate(45deg);
+    margin: 0;
+  }
+  &:nth-child(2){
+    display: none;
+  }
+  &:last-child{
+    transform: rotate(-45deg);
+    margin: 0;
+  }
+}
+
+
+.header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  padding: 10px 10px;
+
+  &_inner{
+    position: relative;
+    display: flex;
+    width: 97%;
+    box-sizing: content-box;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1880px;
+  }
+  &_list {
+    margin-left: 90px;
+    a{
+      text-decoration: none;
+      color: #fff;
+      display: inline-block;
+      transition: 0.3s;
+      &:hover{
+        font-weight: bold;
+        transform: scale(1.1);
+      }
+    }
+  }
+  img {
+    width:200px;
+    height: 39.8px;
+  }
+  & li {
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 25px;
+  }
+  &_left {
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    margin: 0;
+    margin-top: 10px;
+  }
+  &-btn {
+    position:absolute;
+    right: 0;
+    & a {
+      text-decoration: none;
+      color: #fff;
+      padding: 15px 36px;
+      background-color: #978F10;
+      &:hover{
+        background-color:black;
+        transition: all .4s;
+      }
+    }
+    }
+  .btn-reservation::before {
+    content: "";
+    display: inline-block;
+    margin: -3px 5px 0 0;
+    background: url(../images/calender.png) no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+  }
+}

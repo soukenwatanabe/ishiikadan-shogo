@@ -1,0 +1,58 @@
+.footer {
+  text-align: center;
+  background: url(../images/bg3.png);
+
+  img {
+      max-width: 145px;
+      height: auto;
+      margin: 70px 0 45px;
+  }
+
+  &_top{
+    padding-top: 35px;
+  }
+  &_top ul{
+    display: flex;
+    text-decoration:none;
+    padding: 0;
+    justify-content: center;
+  }
+
+  &_top li{
+    display: inherit;
+    list-style: none;
+    font-size: 18px;
+    writing-mode: vertical-lr;
+    padding-right: 32px;
+  }
+  &_top li:last-child{
+    padding-right: 0;
+  }
+
+  &_top a{
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 10px;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+  &_btm {
+    padding-bottom: 45px;
+  }
+  &_btm p {
+    margin-bottom: 0;
+    font-size: 16px;
+    display: inline-block;
+    +p{
+      margin-left: 20px;
+    }
+  }
+
+  &_copyright{
+    background: black;
+    color:#fff;
+    font-size: 14px;
+    padding: 20px 0;
+  }
+}

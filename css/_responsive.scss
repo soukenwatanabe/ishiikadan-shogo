@@ -1,0 +1,976 @@
+$bgpc: 1920px; //大画面
+$mmpc: 1500px; //
+$medpc: 1180px; //中画面
+$pc: 1024px; // PC
+$tab: 768px; // タブレット
+$smalltab: 600px; //小タブレット
+$sp: 414px;  // スマホ
+$ssp: 375px; // iphone6
+
+
+
+
+@mixin bgpc{
+  @media (max-width: ($bgpc)){
+    @content;
+  }
+}
+@mixin medpc{
+  @media (max-width: ($medpc)){
+    @content;
+  }
+}
+@mixin mmpc{
+  @media (max-width: ($mmpc)){
+    @content;
+  }
+}
+
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+//600以下//
+@mixin smalltab{
+  @media (max-width: ($smalltab)){
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin ssp{
+  @media (max-width: ($ssp)){
+    @content;
+  }
+}
+
+.sp_only{
+  @include sp{
+    display: block;
+  }
+}
+.global-nav{
+  @include smalltab{
+    width: 70%;
+    top: 60px;
+  }
+}
+.header-nav-item-link {
+  @include sp{
+    font-size: 16px!important;
+  }
+}
+.header .global-nav li{
+  @include smalltab{
+    font-size: 20px;
+    margin-left: 35px;
+  }
+}
+.main_img_txt{
+  @include medpc{
+    top: 30%;
+    left: 60%;
+  }
+  @include smalltab{
+    font-size: 25px;
+    left: 40%;
+    top: 25%;
+    line-height: 80px;
+  }
+  @include sp{
+    line-height: 50px;
+  }
+}
+.main_imgBox{
+  @include medpc{
+    height: 700px;
+  }
+  @include smalltab{
+    height: 585px;
+  }
+}
+.main_img {
+  @include medpc{
+    height: 700px;
+  }
+}
+.header_left {
+  @include medpc{
+    padding-top: 4px;
+  }
+  @include smalltab{
+    padding-top: 12px;
+  }
+}
+.header-btn {
+  @include medpc{
+    top: 20px;
+    right: 108px;
+  }
+  @include smalltab{
+    right: 75px;
+  }
+  @include sp{
+    top: 15px;
+    right: 40px;
+  }
+}
+.drawer-toggle {
+  @include medpc{
+    display: inline-block;
+    right: -90px;
+  }
+  @include smalltab{
+    top: -18px;
+    right: -78px;
+  }
+  @include sp{
+    right: -55px;
+    top: -14px;
+  }
+  span {
+    @include sp{
+      width: 25px;
+      height: 2px;
+    }
+  }
+}
+.header-btn a{
+  @include smalltab{
+    padding: 10px 14px;
+    display: inline-block;
+    margin-top: -16px;
+  }
+  @include sp{
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+.header{
+  @include smalltab{
+    padding: 0;
+    width: 100%;
+    height: 60px;
+  }
+}
+
+.header_list{
+  @include medpc{
+    display: none;
+  }
+}
+.header img {
+  @include smalltab{
+    width: 100px;
+    height: 20px;
+  }
+}
+
+.closeModal img {
+  @include medpc{
+    width: 100%;
+    height: auto;
+  }
+}
+.modalContents{
+  @include smalltab{
+    min-width: auto;
+    padding: 30px 20px 15px;
+    max-width: 100%;
+    width: 85%;
+  }
+  h2 {
+    @include smalltab{
+      border-bottom: 2px solid #f3f3f3;
+      margin: 0 0 15px;
+    }
+  }
+  .formtxt{
+    @include smalltab{
+      font-size: 14px;
+    }
+  }
+  input, select{
+    @include medpc{
+      font-size: 14px;
+    }
+  }
+}
+.close-btn{
+  @include medpc{
+    margin-top: 45px;
+  }
+  a{
+    @include smalltab{
+      padding: 10px 65px;
+    }
+  }
+}
+.js-header-logo {
+  @include medpc{
+    margin-left: -200px;
+  }
+  @include smalltab{
+    margin-left: -100px;
+  }
+}
+
+.title-sp-only{
+  @include medpc{
+    display: none;
+  }
+}
+.about-inner{
+  @include medpc{
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  @include smalltab{
+    padding: 70px 0 80px;
+    width: 90%;
+  }
+}
+.about-title{
+  @include smalltab{
+    font-size: 16px;
+    text-indent: -55px;
+    letter-spacing: 9px;
+  }
+  @include pc{
+    line-height: 30px;
+  }
+}
+.about-name{
+  @include medpc{
+    margin-right: 0;
+  }
+  @include smalltab{
+    font-size: 16px;
+  }
+  @include sp{
+    font-size: 14px;
+  }
+}
+.about-txt{
+  @include medpc{
+    margin-right: 0;
+  }
+  @include smalltab{
+    font-size: 14px;
+    line-height: 25px;
+  }
+  @include sp{
+    line-height: 15px;
+    font-size: 12px;
+  }
+}
+#about {
+  @include medpc{
+    margin-top: 60px;
+  }
+}
+
+.about-title {
+  @include medpc{
+    padding-right: 0;
+  }
+}
+//top-imageテキスト//
+
+.top_img_txt{
+  @include smalltab{
+    left: 44%;
+    font-size: 25px;
+  }
+  @include sp{
+    left: 41%;
+  }
+}
+//access//
+.accessinner{
+  @include smalltab{
+    padding: 0 15px;
+  }
+}
+
+.accessBox{
+  @include bgpc{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+  li{
+  img{
+  max-width: 93%;
+  @include mmpc{
+    max-width: 1000px;
+    width: 100%;
+    max-height: 450px;
+  }
+  @include smalltab{
+    max-height: 300px;
+  }
+  }
+  } 
+  }
+  @include mmpc{
+    flex-direction: column;
+  }
+}
+.accessBox{
+  @include smalltab{
+    width: 100%;
+    margin: 0;
+  }
+}
+.flexleft{
+  @include mmpc{
+    width: 80%;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  @include smalltab{
+    width: 100%;
+  }
+}
+.flexright {
+  @include mmpc{
+    width: 80%;
+    margin: 0 auto;
+  }
+  @include medpc{
+    margin-bottom: 30px;
+  }
+  @include smalltab{
+    width: 100%;
+    margin: 0;
+  }
+}
+#access h2{
+  @include smalltab{
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+}
+.text-bold{
+  @include smalltab{
+    margin-bottom: 10px;
+  }
+}
+.text-nobold{
+  @include smalltab{
+    margin-bottom: 8px;
+  }
+}
+.flexright p:first-child {
+  @include smalltab{
+    margin-top: 19px;
+  }
+}
+
+//news//
+
+.right{
+  @include medpc{
+    margin-left: 5px;
+  }
+}
+.card figure{
+  @include medpc{
+    width: 90%;
+    margin-left: auto;
+  }
+}
+.fstcard{
+  @include smalltab{
+    flex-direction: column;
+  }
+}
+.seccard{
+  @include smalltab{
+    flex-direction: column;
+  }
+}
+.thirdcard{
+  @include smalltab{
+    flex-direction: column;
+  }
+}
+#news .card{
+  @include smalltab{
+    width: 100%;
+    padding: 0;
+    padding-top: 10px;
+  }
+}
+#news h2{
+  @include smalltab{
+    font-size: 28px;
+  }
+}
+//map//
+
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+//roomコンテンツ//
+.oheya_contents{
+  @include medpc{
+  width: 85%;
+  padding-top: 150px;
+  margin-top: 315px;
+  };
+  @include tab{
+    width: 75%;
+    padding-top: 130px;
+  }
+  @include smalltab{
+    padding-right: 0;
+    width: 100%;
+    position: relative;
+    height: 165px;
+    padding-top: 48px;
+  }
+  @include sp{
+    height: 170px;
+    padding-bottom: 85px;
+  }
+}
+
+.flexBox{
+  @include mmpc{
+    width: 93%;
+  }
+  @include medpc{
+    width: 100%;
+    display: block;
+  }
+}
+.flexBoxInner {
+  @include medpc{
+    max-width: 95%;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  @include smalltab{
+    flex-direction: column;
+  }
+}
+figure {
+  @include medpc{
+    width: 50%;
+  }
+  @include smalltab{
+    width: 100%;
+  }
+}
+#plan a img {
+  @include medpc{
+    height: 100%;
+  }
+}
+.delay2{
+  @include medpc{
+    transition-delay: 0.2s;
+  }
+}
+.delay3 {
+  @include medpc{
+    transition-delay: 0.2s;
+  }
+}
+.flexTxt{
+  @include medpc{
+    width: 47%;
+    padding-left: 20px;
+  }
+  @include smalltab{
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+  }
+}
+.planinner h3{
+  @include medpc{
+    margin: 0;
+    padding: 0;
+  }
+  @include smalltab{
+    margin-top: 8px;
+  }
+}
+#plan{
+  @include smalltab{
+    padding: 60px 0;
+  }
+}
+.planinner h2{
+  @include smalltab{
+    font-size: 28px;
+  }
+}
+#plan p{
+  @include medpc{
+    margin-top: 36px;
+  }
+  @include smalltab{
+    margin-top: 20px;
+  }
+}
+.item{
+  @include smalltab{
+    height: 350px;
+  }
+}
+.top_img{
+  @include smalltab{
+    height: 350px;
+  }
+}
+#oheya{
+  @include medpc{
+    margin-top: 85px;
+  }
+  @include smalltab{
+    margin-top: 50px;
+  }
+}
+.oheya-left{
+  @include medpc{
+    width: 100%;
+  }
+}
+.sectioninner{
+  @include medpc{
+    flex-direction: column;
+    margin: 0 auto;
+    width: 97%;
+  }
+  @include smalltab{
+    width: 95%;
+  }
+}
+.sectioninner img {
+  @include mmpc{
+    height: 550px;
+    max-width: 1140px;
+  }
+  @include medpc{
+    width: 100%;
+  }
+  @include smalltab{
+    height: 300px;
+  }
+}
+#oryouri{
+  @include smalltab{
+    margin-top: 80px;
+  }
+}
+.oryouri{
+  top: 1200px;
+  @include smalltab{
+    top: 960px;
+  }
+  @include sp{
+    
+  }
+}
+#oryouri .sectioninner{
+  @include medpc{
+    flex-direction: column;
+  }
+}
+#oryouri .wrapper-right{
+  @include medpc{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+}
+.oryouri-contents{
+  margin-top: 340px !important;
+  padding-top: 50px;
+  @include smalltab{
+    height: 150px!important;
+  }
+  @include sp{
+    margin-top: 300px!important;
+    height: 160px!important;
+  }
+}
+.oryouri-contents1{
+  @include smalltab{
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+  @include sp{
+    margin-top: 280px;
+    height: 240px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.oryouri-picture1{
+  @include medpc{
+    top: -200px;
+  }
+  @include smalltab{
+    width: 100%;
+    height: 300px;
+    top: -230px;
+  }
+  @include sp{
+    height: 250px;
+  }
+}
+.oryouri-picture2{
+  @include tab{
+      top: 530px;
+  }
+  @include smalltab{
+    width: 100%;
+    height: 300px;
+    top: 350px !important;
+  }
+  @include sp{
+    top: 370px!important;
+    height: 250px;
+  }
+}
+.oryouri-picture3{
+  @include smalltab{
+    height: 300px;
+    width: 100%;
+  }
+  @include sp{
+    height:250px;
+  }
+}
+.hotspring-picture1{
+  @include medpc{
+    top: -200px;
+  }
+  @include smalltab{
+    width: 100%;
+    max-width: 560px;
+    height: 250px;
+    top: -230px;
+  }
+}
+.hotspring_contents{
+  @include tab{
+    padding-bottom: 70px;
+  }
+}
+.hotspring_contents2{
+  @include smalltab{
+    margin-top: 290px!important;
+  }
+}
+.hotspring-picture2{
+  @include medpc{
+    top: 580px!important;
+  }
+  @include tab{
+    top: 510px !important;
+  }
+  @include smalltab{
+    width: 100%;
+    max-width: 560px;
+    height: 250px;
+    top: 330px !important;
+  }
+  @include sp{
+    top: 310px;
+  }
+}
+.wrapper-right {
+  @include mmpc{
+    margin-left: 100px;
+  }
+  @include medpc{
+    margin-left: 0;
+    text-align: center;
+  }
+}
+.wrapper-right h2{
+  @include medpc{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  @include smalltab{
+    font-size: 25px;
+  }
+  @include sp {
+    font-size: 20px;
+  }
+}
+.wrapper-right h2:last-child{
+  @include medpc{
+    margin-bottom: 40px;
+  }
+}
+.wrapper-right h2:first-child{
+  @include medpc{
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+}
+.margin{
+  @include medpc{
+    margin-bottom: 70px !important;
+  }
+}
+#onsen {
+  @include smalltab{
+    margin-top: 80px;
+  }
+}
+.onsen-left{
+  @include medpc{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//お部屋・お料理・温泉ページ///
+.oheya_top{
+  font-weight: bold;
+  @include medpc{
+    padding-top: 0;
+  }
+  @include sp{
+    font-size: 20px;
+  }
+}
+.innertop{
+  @include sp{
+    font-size: 14px;
+  }
+}
+.innersemtop{
+  @include tab{
+    font-size: 14px;
+  }
+}
+.oheya_mdl{
+  @include medpc{
+    padding: 33px 0 20px;
+  }
+  @include smalltab{
+    letter-spacing: -1px;
+    padding: 20px 0 15px;
+  }
+  @include sp{
+    font-size: 14px;
+  }
+}
+.sponly{
+  @include medpc{
+    display: none;
+  }
+  @include tab {
+    display: block;
+  }
+  @include smalltab{
+    display: none;
+  }
+}
+.oheya_contents1{
+  @include medpc{
+    width: 95%;
+    padding-top: 125px;
+    margin-top: 250px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    };
+    @include tab{
+      width: 95%;
+      padding-left: 0;
+      margin-left: auto;
+      padding-top: 110px;
+      margin-top: 320px;
+    }
+    @include smalltab{
+      padding-right: 0;
+      width: 100%;
+      position: relative;
+      height: 210px;
+      padding-top: 48px;
+      margin-top: 280px;
+      padding-bottom: 25px;
+    }
+    @include sp{
+      height: 190px;
+      padding-bottom: 80px;
+      padding-top: 25px;
+    }
+}
+.oheya-picture1{
+  @include medpc{
+    top:-200px;
+  }
+  @include smalltab{
+    width: 100%;
+    max-width: 550px;
+    height: 250px;
+    top: -230px;
+  }
+}
+.oheyainner{
+  @include smalltab{
+    padding-top: 53px;
+    padding-bottom: 25px;
+    margin-top: 290px;
+  }
+  @include sp{
+    padding-top: 30px;
+    padding-bottom: 70px;
+    margin-top: 270px;
+  }
+}
+.oheya-picture2{
+  @include smalltab{
+    width: 100%;
+    max-width: 550px;
+    height: 250px;
+    top: 330px !important;
+  }
+  @include tab{
+    top: 530px;
+  }
+  @include sp{
+    top: 310px;
+  }
+}
+.oheya-picture3{
+  @include medpc{
+    top: 1159px;
+  }
+  @include tab{
+    top: 1200px;
+  }
+  @include smalltab{
+    width: 100%;
+    max-width: 550px;
+    height: 250px;
+    top: 900px;
+  }
+}
+.oheya-txt {
+  @include medpc{
+    margin-left: 70px;
+    width: 90%;
+  }
+  @include smalltab{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    width: 90%;
+    margin-left: 20px;
+  }
+}
+.oheya-txt1{
+  @include medpc{
+    margin-left: 95px;
+    width: 90%;
+  }
+  @include smalltab{
+    width: 90%;
+    margin: 0;
+    position: absolute;
+    max-width: 550px;
+    margin-left: 20px;
+  }
+}
+
+.oheya_btm{
+  @include medpc{
+    white-space: initial;
+  }
+  @include sp{
+    font-size: 12px;
+  }
+}
+
+//footer//
+
+
+.footer_btm p{
+  @include smalltab{
+    font-size: 14px;
+  }
+  @include sp{
+    font-size: 12px;
+  }
+}
+.footer_copyright{
+  @include sp{
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (min-width: 1500px){
+.accessBox{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+  li{
+  img{
+  max-width: 93%;
+  }
+  } 
+  }
+
+}
+@media screen and(min-width: 1180px){
+
+  .access-map-inner {
+    margin: 70px auto 0;
+    max-width: 792px;
+  }
+
+}
